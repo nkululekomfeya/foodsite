@@ -7,11 +7,17 @@ import { useRouter } from 'next/navigation'
 import GlobalApi from '../_utils/GlobalApi';
 import { toast } from 'sonner';
 import { UpdateCartContext } from '../_context/UpdateCartContext';
-
+if (typeof window !== 'undefined') {
+  jwt = sessionStorage.getItem('jwt');
+}
 export default function ProductItemDetail({product}) {
-  const user=JSON.parse(sessionStorage.getItem('user'));
+  if (typeof window !== 'undefined') {
+    jwt = sessionStorage.getItem('jwt');
+    const user=JSON.parse(sessionStorage.getItem('user'));
+  }
+  
   const {updateCart,setUpdateCart}=useContext(UpdateCartContext)
-  const jwt=sessionStorage.getItem('jwt')
+  
   const router=useRouter();
   const [productTotalPrice,setProductTotalPrice]=useState(
     product.attributes.sellingPrice?

@@ -16,7 +16,9 @@ function CreateAccount() {
     const [password, setPassword]=useState();
     const router=useRouter();
     const [loader,setLoader]=useState();
-    
+    if (typeof window !== 'undefined') {
+        jwt = sessionStorage.getItem('jwt');
+      }
     useEffect(()=>{
         const jwt=sessionStorage.getItem('jwt');
         if(jwt)

@@ -1,0 +1,35 @@
+[debug] [2024-07-08T03:52:37.050Z] ----------------------------------------------------------------------
+[debug] [2024-07-08T03:52:37.085Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Dev\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --debug
+[debug] [2024-07-08T03:52:37.090Z] CLI Version:   13.13.0
+[debug] [2024-07-08T03:52:37.092Z] Platform:      win32
+[debug] [2024-07-08T03:52:37.093Z] Node Version:  v20.12.2
+[debug] [2024-07-08T03:52:37.095Z] Time:          Mon Jul 08 2024 05:52:37 GMT+0200 (South Africa Standard Time)
+[debug] [2024-07-08T03:52:37.096Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-08T03:52:38.089Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-08T03:52:38.169Z] > authorizing via signed-in user (nmfeya007@gmail.com)
+[debug] [2024-07-08T03:52:38.205Z] [iam] checking project foodsite-dd622 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-07-08T03:52:38.315Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/foodsite-dd622:testIamPermissions [none]
+[debug] [2024-07-08T03:52:38.330Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/foodsite-dd622:testIamPermissions x-goog-quota-user=projects/foodsite-dd622
+[debug] [2024-07-08T03:52:38.358Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/foodsite-dd622:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-08T03:52:40.338Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/foodsite-dd622:testIamPermissions 200
+[debug] [2024-07-08T03:52:40.339Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/foodsite-dd622:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-08T03:52:40.342Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/foodsite-dd622 [none]
+[debug] [2024-07-08T03:52:41.141Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/foodsite-dd622 200
+[debug] [2024-07-08T03:52:41.143Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/foodsite-dd622 {"projectId":"foodsite-dd622","projectNumber":"655900660577","displayName":"foodsite","name":"projects/foodsite-dd622","resources":{"hostingSite":"foodsite-dd622"},"state":"ACTIVE","etag":"1_b6f09075-3c60-4b4c-85a3-b7841a74666a"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-07-08T03:53:22.188Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/foodsite-dd622/sites/foodsite-dd622 [none]
+[debug] [2024-07-08T03:53:24.330Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/foodsite-dd622/sites/foodsite-dd622 200
+[debug] [2024-07-08T03:53:24.335Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/foodsite-dd622/sites/foodsite-dd622 {"name":"projects/foodsite-dd622/sites/foodsite-dd622","defaultUrl":"https://foodsite-dd622.web.app","appId":"1:655900660577:web:5e86f3215d4ed6ec7ceb20","type":"DEFAULT_SITE"}
+[error] 
+[error] Error: Error finding next executable: failed to spawn 'npm'
